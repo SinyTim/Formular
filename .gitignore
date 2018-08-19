@@ -1,0 +1,8 @@
+*.pyc
+*~
+venv
+__pycache__
+media/
+db.sqlite3
+ignore_file.py
+.DS_Store

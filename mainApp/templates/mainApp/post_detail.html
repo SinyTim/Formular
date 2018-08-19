@@ -1,0 +1,14 @@
+{% extends 'mainApp/base.html' %}
+
+{% block content %}
+
+  <article>
+    <p>{{ post.date }}</p>
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.text|linebreaksbr }}</p>
+    {% if post.image %}
+      <img src="{{ post.image.url }}">
+    {% endif %}
+  </article>
+
+{% endblock content %}

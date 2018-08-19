@@ -1,0 +1,12 @@
+{% extends 'mainApp/base.html' %}
+
+{% block content %}
+
+  {% for client in clients %}
+    <article>
+      <h3>{{ client.name }}</h3>
+      <p>{{ client.description }}</p>
+    </article>
+  {% endfor %}
+
+{% endblock content %}

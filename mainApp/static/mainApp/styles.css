@@ -1,0 +1,34 @@
+
+* {
+  margin: 0;
+}
+
+header {
+  background-color: red;
+  height: 100px;
+}
+
+footer {
+  background-color: blue;
+  height: 50px;
+  /* TODO прижать к низу. */
+}
+
+main {
+  background-color: grey;
+  width: 80%;
+}
+
+aside {
+  background-color: green;
+  width: 20%;
+}
+
+.flex-container {
+  display: flex;
+}
+
+article {
+  border: solid;
+  border-color: yellow;
+}

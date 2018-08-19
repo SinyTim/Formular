@@ -1,0 +1,35 @@
+{% load static %}
+
+<html>
+
+<head>
+  <title>Formular</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'mainApp/styles.css' %}">
+</head>
+
+<body>
+
+  <header>
+    <a href="{% url 'mainApp:home' %}">Главная</a>
+    <a href="{% url 'mainApp:posts_list' %}">Новости</a>
+    <a href="{% url 'mainApp:clients' %}">Наши клиенты</a>
+    <a href="{% url 'mainApp:contacts' %}">Контакты</a>
+  </header>
+
+  <div class="flex-container">
+    <main>
+      {% block content %}
+      {% endblock content %}
+    </main>
+    <aside>
+      <!--  -->
+    </aside>
+  </div>
+
+  <footer>
+    <!--  -->
+  </footer>
+
+</body>
+
+</html>

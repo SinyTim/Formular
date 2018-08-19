@@ -1,0 +1,30 @@
+{% extends 'mainApp/base.html' %}
+
+{% block content %}
+
+  {% for post in posts %}
+    <article>
+      <p>{{ post.date }}</p>
+      <h3>
+        <a href="{% url 'mainApp:post_detail' post_id=post.id %}">{{ post.title }}</a>
+      </h3>
+    </article>
+  {% endfor %}
+
+  <div> <!-- class="pagination" -->
+    <span> <!-- class="step-links" -->
+      {% if posts.has_previous %}
+        <a href="{% url 'mainApp:posts_list' page_num=1 %}">&laquo; Начало</a>
+        <a href="{% url 'mainApp:posts_list' page_num=posts.previous_page_number %}">Назад</a>
+      {% endif %}
+      <span> <!--class="current" -->
+        Стр. {{ posts.number }} из {{ posts.paginator.num_pages }}
+      </span>
+      {% if posts.has_next %}
+        <a href="{% url 'mainApp:posts_list' page_num=posts.next_page_number %}">Вперёд</a>
+        <a href="{% url 'mainApp:posts_list' page_num=posts.paginator.num_pages %}">Конец &raquo;</a>
+      {% endif %}
+    </span>
+  </div>
+
+{% endblock content %}
