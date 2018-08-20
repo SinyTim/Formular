@@ -7,11 +7,11 @@
 }
 
 body {
+  background-color: white;
   /* Footer to bottom: */
   /* display: flex;
   flex-direction: column;
   height: 100vh; */
-  background-color: white;
 }
 
 header {
@@ -28,6 +28,74 @@ header h1 {
 
 header p {
   font-family: 'Arial', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #d7ff45;
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-align: center;
+  padding: 15px 20px;
+  background-color: #d7ff45;
+  color: black;
+  font-size: 18px;
+  border-bottom-width: 2px;
+  border-bottom-color: #363636;
+  border-bottom-style: solid;
+}
+
+nav a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Footer to bottom: */
+  /* flex: 1; */
+}
+
+main {
+  flex: 70%;
+  text-align: left;
+  padding: 0% 3%;
+  font-family: 'Verdana';
+  font-size: 14px;
+}
+
+aside {
+  flex: 25%;
+  padding: 0% 3%;
+  border-left: 4px solid rgba(215,255,69,0.85);
+}
+
+@media screen and (max-width: 750px) {
+  aside {
+    border-left: 0;
+  }
+  main {
+    margin-bottom: 3%;
+  }
+}
+
+footer {
+  margin-top: 10px;
+  /* position: fixed;
+  left: 0;
+  bottom: 0; */
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  background-color: grey;
+}
+
+a {
+  text-decoration: none;
 }
 
 h2 {
@@ -48,75 +116,12 @@ hr {
   height: 50px;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  background-color: #d7ff45;
-  overflow: hidden;
-}
-
-nav a {
-  text-decoration: none;
-  text-align: center;
-  padding: 15px 20px;
-  color: black;
-  background-color: #d7ff45;
-  font-size: 18px;
-  top: 0px;
-  border-bottom-width: 2px;
-  border-bottom-color: #363636;
-  border-bottom-style: solid;
-}
-
-nav a:hover {
-  background: #ddd;
-  color: black;
-}
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  /* Footer to bottom: */
-  /* flex: 1; */
-}
-
-main {
-  flex: 70%;
-  height: 500px;
-  text-align: left;
-  padding: 3%;
-  font-family: 'Verdana';
-  font-size: 14px;
-}
-
-.line1 {
-  background-color: #fff;
-  box-shadow: 0px 30px 5px 3px rgba(215,255,69,0.85);
-  height: 250px;
-  marging: 10px;
-}
-
-aside {
-  flex: 25%;
-  padding: 3%;
-}
-
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  background-color: grey;
-}
-
 article {
   border: solid; /* TODO */
   border-color: yellow;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
     .flex-container, nav {
         flex-direction: column;
     }

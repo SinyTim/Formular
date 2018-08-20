@@ -5,8 +5,8 @@
   <title>Formular</title>
   <meta http-http-equiv="Content-Type" content="text/html" charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="программа автоматизации торговли, FormulaR, ретмастер">
-  <meta name="description" content="Программа автоматизации торговли" >
+  <meta name="keywords" content="formular, retmaster, формуляр, ретмастер, автоматизация розничной торговли, система автоматизации торговых сетей,">
+  <meta name="description" content="Программа Formular, Формуляр - программа управления торговыми предприятиями, программа автоматизации торговли. Ретмастер - автоматизация торговых сетей, автоматизация торговли.">
   <link href="{% static 'mainApp/styles.css' %}" rel="stylesheet" type="text/css">
   <link href="{% static 'mainApp/images/logo.jpg' %}" rel="shortcut icon" type="image/x-icon">
 </head>
@@ -14,9 +14,10 @@
 <body>
 
   <header>
-    <!-- <h1><img class="telefon" src="phone.png" alt="telefon">FormulaR</h1> -->
-    <h1>FormulaR</h1>
-    <p>программа автоматизации торговли</p>
+    <a href="{% url 'mainApp:home' %}">
+      <h1>FormulaR</h1>
+      <p>программа автоматизации торговли</p>
+    </a>
   </header>
 
   <nav>
@@ -34,8 +35,6 @@
       {% endblock content %}
     </main>
 
-    <div class="line1"></div>
-
     <aside>
       <h2>Наши телефоны:</h2>
       <br>
@@ -44,7 +43,7 @@
   </div>
 
   <footer>
-    © ОДО «Ретмастер», 2018 г.
+    &copy; ОДО &laquo;Ретмастер&raquo;, 2018 г.
   </footer>
 
 </body>
