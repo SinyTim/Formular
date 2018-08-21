@@ -7,7 +7,7 @@
     <h3>{{ post.title }}</h3>
     <p>{{ post.text|linebreaksbr }}</p>
     {% if post.image %}
-      <img src="{{ post.image.url }}">
+      <p><img src="{{ post.image.url }}"></p>
     {% endif %}
   </article>
 

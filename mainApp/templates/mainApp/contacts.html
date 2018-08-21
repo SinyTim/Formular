@@ -1,5 +1,16 @@
 {% extends 'mainApp/base.html' %}
 
+
+{% block nav %}
+  <a href="{% url 'mainApp:home' %}">Главная</a>
+  <a href="{% url 'mainApp:about' %}">О компании</a>
+  <a href="{% url 'mainApp:posts_list' %}">Новости</a>
+  <a href="{% url 'mainApp:catalog' %}">Каталог</a>
+  <a href="{% url 'mainApp:clients' %}">Наши клиенты</a>
+  <a class="active" href="{% url 'mainApp:contacts' %}">Контакты</a>
+{% endblock nav %}
+
+
 {% block content %}
 
   <h2>Контакты</h2>
@@ -9,69 +20,18 @@
   <h3>Адрес офиса:</h3>
   <p>Республика Беларусь, 220034, г.Минск, ул. Краснозвездная, 18Б, каб. 203, 204.</p>
   <h3>Почтовый адрес:</h3>
-  <p>Республика Беларусь, 220034, г.Минск, ул. Краснозвездная, 18Б, пом. 3Б </p>
+  <p>Республика Беларусь, 220034, г.Минск, ул. Краснозвездная, 18Б, пом. 3Б</p>
   <h3>Электронная почта:</h3>
   <p>info@formular.by</p>
   <br>
   <!-- <h3>Местоположение на карте:</h3>
   <iframe width="480" height="400" scrolling="no" frameborder="0" src=""></iframe> -->
 
-  <form action="{% url 'mainApp:contacts' %}" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Отправить">
-  </form>
-
-  <!-- <div class="form-group row">
-    <div class="col-xs-10">
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-      </div>
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <div class="col-xs-10">
-      <label for="ex2">Тема:</label>
-      <input class="form-control" id="ex2" type="text">
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <div class="col-xs-10">
-      <div class="form-group">
-        <label for="comment">Текст:</label>
-        <textarea class="form-control" rows="8" id="comment"></textarea>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="radio">
-    <label><input type="radio" name="optradio" checked>Выслать копию сообщения</label>
-  </div>
-
-  <button type="submit" class="btn btn-default">Отправить</button> -->
-
   <div class="container">
-    <form action="action_page.php">
-
-      <label for="email">Email:</label>
-      <input type="text" id="email" name="email" placeholder="Your email..">
-
-      <label for="тема">Тема: </label>
-      <input type="text" id="тема" name="тема">
-
-      <label for="subject">Текст: </label>
-      <textarea id="subject" name="subject" placeholder="Your message.." style="height:200px"></textarea>
-
-      <div class="radio">
-        <label><input type="radio" name="optradio" checked>Выслать копию сообщения</label>
-      </div>
-
-      <button type="submit" class="btn btn-default">Отправить</button>
-
+    <form action="{% url 'mainApp:contacts' %}" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Отправить">
     </form>
   </div>
 

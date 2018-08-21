@@ -1,6 +1,17 @@
 {% extends 'mainApp/base.html' %}
 {% load static %}
 
+
+{% block nav %}
+  <a class="active" href="{% url 'mainApp:home' %}">Главная</a>
+  <a href="{% url 'mainApp:about' %}">О компании</a>
+  <a href="{% url 'mainApp:posts_list' %}">Новости</a>
+  <a href="{% url 'mainApp:catalog' %}">Каталог</a>
+  <a href="{% url 'mainApp:clients' %}">Наши клиенты</a>
+  <a href="{% url 'mainApp:contacts' %}">Контакты</a>
+{% endblock nav %}
+
+
 {% block content %}
 
   <h2>Главная</h2>

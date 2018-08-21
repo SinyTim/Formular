@@ -8,10 +8,6 @@
 
 body {
   background-color: white;
-  /* Footer to bottom: */
-  /* display: flex;
-  flex-direction: column;
-  height: 100vh; */
 }
 
 header {
@@ -26,16 +22,21 @@ header h1 {
   font-family: 'Monoton', sans-serif;
 }
 
+@media screen and (max-width: 400px) {
+  header h1 {
+      font-size: 35px;
+    }
+  header p {
+    font-size: 20px;
+  }
+}
+
 header p {
   font-family: 'Arial', sans-serif;
 }
 
 header a {
   color: white;
-}
-
-header a:hover {
-  color: pink;
 }
 
 nav {
@@ -56,16 +57,14 @@ nav a {
   border-bottom-style: solid;
 }
 
-nav a:hover {
-  background: #ddd;
-  color: black;
+.active, nav a:hover {
+    background-color: grey;
+    color: #d7ff45;
 }
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  /* Footer to bottom: */
-  /* flex: 1; */
 }
 
 main {
@@ -80,6 +79,7 @@ aside {
   flex: 25%;
   padding: 0% 3%;
   border-left: 4px solid rgba(215,255,69,0.85);
+  height: 150px;
 }
 
 @media screen and (max-width: 750px) {
@@ -88,6 +88,8 @@ aside {
   }
   main {
     margin-bottom: 3%;
+    padding-bottom: 3%;
+    border-bottom: 3px dashed #d7ff45;
   }
 }
 
@@ -99,7 +101,7 @@ footer {
   width: 100%;
   text-align: center;
   padding: 20px;
-  background-color: grey;
+  background-color: #ddd;
 }
 
 a {
@@ -143,15 +145,18 @@ article {
     }
 }
 
-input[type=text], select, textarea {
+input[type=text], input[type=email], textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */
     border: 1px solid #ccc; /* Gray border */
     border-radius: 4px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+form p {
+  margin-top: 6px;
+  margin-bottom: 16px;
 }
 
 /* Style the submit button with a specific background color etc */
