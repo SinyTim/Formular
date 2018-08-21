@@ -24,21 +24,29 @@
       </h3>
     </article>
   {% endfor %}
-
-  <div> <!-- class="pagination" -->
-    <span> <!-- class="step-links" -->
+  
+  <div class="center">
+    <div class="pagination">
       {% if posts.has_previous %}
-        <a href="{% url 'mainApp:posts_list' page_num=1 %}">&laquo; Начало</a>
-        <a href="{% url 'mainApp:posts_list' page_num=posts.previous_page_number %}">Назад</a>
+        {% if posts.previous_page_number != 1 %}
+          <a href="{% url 'mainApp:posts_list' page_num=1 %}">1</a>
+          {% if posts.previous_page_number != 2 %}
+            <a>&hellip;</a>
+          {% endif %}
+        {% endif %}
+        <a href="{% url 'mainApp:posts_list' page_num=posts.previous_page_number %}">{{posts.previous_page_number}}</a>
       {% endif %}
-      <span> <!--class="current" -->
-        Стр. {{ posts.number }} из {{ posts.paginator.num_pages }}
-      </span>
+      <a class="active">{{ posts.number }}</a>
       {% if posts.has_next %}
-        <a href="{% url 'mainApp:posts_list' page_num=posts.next_page_number %}">Вперёд</a>
-        <a href="{% url 'mainApp:posts_list' page_num=posts.paginator.num_pages %}">Конец &raquo;</a>
+        <a href="{% url 'mainApp:posts_list' page_num=posts.next_page_number %}">{{posts.next_page_number}}</a>
+        {% if posts.next_page_number != posts.paginator.num_pages %}
+          {% if posts.next_page_number|add:"1" != posts.paginator.num_pages %}
+            <a>&hellip;</a>
+          {% endif %}
+          <a href="{% url 'mainApp:posts_list' page_num=posts.paginator.num_pages %}">{{posts.paginator.num_pages}}</a>
+        {% endif %}
       {% endif %}
-    </span>
+    </div>
   </div>
 
 {% endblock content %}
