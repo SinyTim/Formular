@@ -13,6 +13,10 @@ def home(request):
     return render(request, 'mainApp/home.html')
 
 
+def about(request):
+    return render(request, 'mainApp/about.html')
+
+
 def posts_list(request, page_num=1):
     list = Post.objects.order_by('-date')
     paginator = Paginator(list, 3)
@@ -23,6 +27,10 @@ def posts_list(request, page_num=1):
 def post_detail(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     return render(request, 'mainApp/post_detail.html', {'post': post})
+
+
+def catalog(request):
+    return render(request, 'mainApp/catalog.html')
 
 
 def clients(request):
