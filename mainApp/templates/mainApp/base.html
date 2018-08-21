@@ -9,6 +9,9 @@
   <meta name="description" content="Программа Formular, Формуляр - программа управления торговыми предприятиями, программа автоматизации торговли. Ретмастер - автоматизация торговых сетей, автоматизация торговли.">
   <link href="{% static 'mainApp/styles.css' %}" rel="stylesheet" type="text/css">
   <link href="{% static 'mainApp/images/logo.jpg' %}" rel="shortcut icon" type="image/x-icon">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 </head>
 
 <body>
@@ -19,6 +22,26 @@
       <p>программа автоматизации торговли</p>
     </a>
   </header>
+
+  <!-- <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="{% url 'mainApp:home' %}">Главная</a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="{% url 'mainApp:posts_list' %}">Новости</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="{% url 'mainApp:clients' %}">Наши клиенты</a></li>
+          <li><a href="{% url 'mainApp:contacts' %}">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
 
   <nav>
     <a href="{% url 'mainApp:home' %}">Главная</a>
