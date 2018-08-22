@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Bangers|Forum|Monoton|Share');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Bangers|Forum|Monoton|Share|Raleway|Tinos');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|PT+Sans|Wallpoet');
 
 * {
   margin: 0;
@@ -22,21 +25,22 @@ header h1 {
   font-family: 'Monoton', sans-serif;
 }
 
-@media screen and (max-width: 400px) {
-  header h1 {
-      font-size: 35px;
-    }
-  header p {
-    font-size: 20px;
-  }
+header a {
+  color: white;
 }
 
 header p {
   font-family: 'Arial', sans-serif;
+  letter-spacing: 1px;
 }
 
-header a {
-  color: white;
+@media screen and (max-width: 400px) {
+  header h1 {
+    font-size: 35px;
+  }
+  header p {
+    font-size: 20px;
+  }
 }
 
 nav {
@@ -112,7 +116,7 @@ main {
   text-align: left;
   padding: 0% 3%;
   font-family: 'Verdana';
-  font-size: 14px;
+  font-size: 15px;
 }
 
 aside {
@@ -127,9 +131,9 @@ aside {
     border-left: 0;
   }
   main {
-    margin-bottom: 3%;
-    padding-bottom: 3%;
-    border-bottom: 3px dashed #d7ff45;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #d7ff45;
   }
   .flex-container {
     flex-direction: column;
@@ -137,10 +141,10 @@ aside {
 }
 
 footer {
-  margin-top: 10px;
+  margin-top: 30px;
   width: 100%;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   background-color: #ddd;
 }
 
@@ -156,14 +160,19 @@ a, a:hover {
   transition: all.6s ease;
 }
 
-h2 {
-  font-size: 20px;
-  font-family: 'Arial';
-}
-
 hr {
   border: none;
   border-top: 1px dotted #000080;
+}
+
+h3 {
+  font-family: 'Arial';
+  font-size: 19px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .logo {
@@ -173,6 +182,42 @@ hr {
   width: 50px;
   height: 50px;
 }
+/* TODO --------------------->>>>>>>>>> */
+.pills {
+  font-family: 'Verdana';
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 1.5;
+  counter-reset: li;
+}
+
+li {
+  left: 1.5em;
+  margin-bottom: 0.75em;
+  padding: 10px 5px;
+  padding-left: 1em;
+  position: relative;
+  background: #E3DEDC;
+  width: 95%;
+}
+
+.pills li:before {
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1.5em;
+  width: 1.875em;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background: #d7ff45;
+  border-bottom-left-radius: 70em;
+  border-top-left-radius: 70em;
+  counter-increment: li;
+  content: counter(li);
+}
+/* <<<<<<<<<<--------------------- */
 
 .center {
     text-align: center;
@@ -208,6 +253,10 @@ hr {
 article {
   border: solid; /* TODO */
   border-color: yellow;
+}
+
+iframe {
+  margin: 20px;
 }
 
 .container {
