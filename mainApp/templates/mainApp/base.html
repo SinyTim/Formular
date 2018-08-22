@@ -22,7 +22,7 @@
     </a>
   </header>
 
-  <nav>
+  <nav id="top-nav">
     {% block nav %}
       <a href="{% url 'mainApp:home' %}">Главная</a>
       <a href="{% url 'mainApp:about' %}">О компании</a>
@@ -31,6 +31,9 @@
       <a href="{% url 'mainApp:clients' %}">Наши клиенты</a>
       <a href="{% url 'mainApp:contacts' %}">Контакты</a>
     {% endblock nav %}
+      <a class="icon" onclick="expandMenu()">
+        <div></div><div></div><div></div>
+      </a>
   </nav>
 
   <div class="flex-container">
@@ -50,6 +53,8 @@
   <footer>
     &copy; ОДО &laquo;Ретмастер&raquo;, 2018 г.
   </footer>
+
+  <script src="{% static 'mainApp/scripts.js' %}"></script>
 
 </body>
 </html>
