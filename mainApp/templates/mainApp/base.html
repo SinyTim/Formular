@@ -25,10 +25,10 @@
   <nav id="top-nav">
     {% block nav %}
       <a href="{% url 'mainApp:home' %}">Главная</a>
-      <a href="{% url 'mainApp:about' %}">О компании</a>
-      <a href="{% url 'mainApp:posts_list' %}">Новости</a>
       <a href="{% url 'mainApp:catalog' %}">Каталог</a>
       <a href="{% url 'mainApp:clients' %}">Наши клиенты</a>
+      <a href="{% url 'mainApp:posts_list' %}">Новости</a>
+      <a href="{% url 'mainApp:about' %}">О компании</a>
       <a href="{% url 'mainApp:contacts' %}">Контакты</a>
     {% endblock nav %}
       <a class="icon" onclick="expandMenu()">
@@ -45,10 +45,9 @@
     <aside>
       <h3>Наши телефоны:</h3>
       <br><hr><br>
-      <!-- <p><img src="{% static 'mainApp/images/phone1.png' %}" alt="">(+375 17) 33-43-903</p> -->
-      <!-- <p><img src="{% static 'mainApp/images/phone2.png' %}" alt="">(+375 29) 33-43-983</p> -->
-      <p>(+375 17) 33-43-903</p>
-      <p>(+375 29) 33-43-983</p>
+      <p><img src="{% static 'mainApp/images/velcom.png' %}" alt="" class="phone-img-1">(+375 29) 33-43-983</p>
+      <br>
+      <p><img src="{% static 'mainApp/images/home_phone.png' %}" alt="" class="phone-img-2">(+375 17) 33-43-903</p>
     </aside>
   </div>
 

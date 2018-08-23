@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Bangers|Forum|Monoton|Share|Raleway|Tinos');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|PT+Sans');
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|PT+Sans|Wallpoet');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Monoton|Share|Raleway|Tinos|PT+Sans|Wallpoet');
 
 * {
   margin: 0;
@@ -47,7 +44,7 @@ nav {
   display: flex;
   justify-content: center;
   background-color: #d7ff45;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 nav a {
@@ -77,12 +74,6 @@ nav .icon {
   background-color: black;
   margin: 2px 0;
 }
-
-/* .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-} */
 
 @media screen and (max-width: 750px) {
   nav a {
@@ -114,16 +105,30 @@ nav .icon {
 main {
   flex: 70%;
   text-align: left;
-  padding: 0% 3%;
+  padding: 0% 4%;
   font-family: 'Verdana';
-  font-size: 15px;
+  font-size: 17px;
 }
 
 aside {
   flex: 25%;
-  padding: 0% 3%;
+  padding: 0% 4%;
   border-left: 4px solid rgba(215,255,69,0.85);
   height: 150px;
+  font-style: 'Verdana';
+  font-size: 20px;
+}
+
+.phone-img-1 {
+  height: 20px;
+  float: left;
+  margin: 0 10px 0 5px;
+}
+
+.phone-img-2 {
+  height: 23px;
+  float: left;
+  margin: 0 10px 0 7px;
 }
 
 @media screen and (max-width: 750px) {
@@ -133,7 +138,6 @@ aside {
   main {
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 3px solid #d7ff45;
   }
   .flex-container {
     flex-direction: column;
@@ -141,10 +145,10 @@ aside {
 }
 
 footer {
-  margin-top: 30px;
+  margin-top: 20px;
+  padding: 30px;
   width: 100%;
   text-align: center;
-  padding: 30px;
   background-color: #ddd;
 }
 
@@ -227,7 +231,12 @@ a article {
   color: black;
 }
 
+a:hover article {
+  background-color: #ddd;
+}
+
 article {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 20px;
   background-color: #f2f2f2;
   padding: 15px;
@@ -274,13 +283,12 @@ iframe {
   margin: 20px 0;
   border-radius: 20px;
   width: 90%;
-  display: inline-block;
 }
 
 .container {
-    border-radius: 20px;
-    background-color: #f2f2f2;
-    padding: 20px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }
 
 form p {
@@ -310,14 +318,14 @@ input[type=checkbox] {
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
