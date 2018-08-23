@@ -13,8 +13,6 @@
 
 {% block content %}
 
-  <h3>Контакты</h3>
-  <br><hr><br>
   <h3>Наименование:</h3>
   <p>ОДО "Ретмастер"</p>
   <br>
@@ -28,7 +26,9 @@
   <p>info@formular.by</p>
   <br>
   <h3>Местоположение на карте:</h3>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.2732650802955!2d27.588500905952483!3d53.90739360594783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfb1b0623f8b%3A0xf42871b02c883973!2z0YPQuy4g0JrRgNCw0YHQvdC-0LfQstGR0LfQtNC90LDRjyAxONCxLCDQnNC40L3RgdC6!5e0!3m2!1sru!2sby!4v1534926362102" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <div class="center">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.2732650802955!2d27.588500905952483!3d53.90739360594783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfb1b0623f8b%3A0xf42871b02c883973!2z0YPQuy4g0JrRgNCw0YHQvdC-0LfQstGR0LfQtNC90LDRjyAxONCxLCDQnNC40L3RgdC6!5e0!3m2!1sru!2sby!4v1534926362102" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
   <div class="container">
     <form action="{% url 'mainApp:contacts' %}" method="POST">
       {% csrf_token %}

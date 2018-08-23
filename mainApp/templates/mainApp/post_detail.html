@@ -14,8 +14,9 @@
 {% block content %}
 
   <article>
-    <p>{{ post.date }}</p>
+    <p class="date">{{ post.date }}</p>
     <h3>{{ post.title }}</h3>
+    <br>
     <p>{{ post.text|linebreaksbr }}</p>
     {% if post.image %}
       <p><img src="{{ post.image.url }}"></p>

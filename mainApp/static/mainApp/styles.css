@@ -21,12 +21,12 @@ header {
   font-size: 25px;
 }
 
-header h1 {
-  font-family: 'Monoton', sans-serif;
-}
-
 header a {
   color: white;
+}
+
+header h1 {
+  font-family: 'Monoton', sans-serif;
 }
 
 header p {
@@ -47,7 +47,7 @@ nav {
   display: flex;
   justify-content: center;
   background-color: #d7ff45;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 nav a {
@@ -173,6 +173,7 @@ h3 {
 img {
   max-width: 100%;
   height: auto;
+  margin: 10px 0;
 }
 
 .logo {
@@ -182,6 +183,7 @@ img {
   width: 50px;
   height: 50px;
 }
+
 /* TODO --------------------->>>>>>>>>> */
 .pills {
   font-family: 'Verdana';
@@ -219,6 +221,22 @@ li {
 }
 /* <<<<<<<<<<--------------------- */
 
+a article {
+  color: black;
+}
+
+article {
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 15px;
+  margin: 12px;
+}
+
+.date {
+  margin-bottom: 5px;
+  color: grey;
+}
+
 .center {
     text-align: center;
 }
@@ -250,13 +268,11 @@ li {
   color: #d7ff45;
 }
 
-article {
-  border: solid; /* TODO */
-  border-color: yellow;
-}
-
 iframe {
-  margin: 20px;
+  margin: 20px 0;
+  border-radius: 20px;
+  width: 90%;
+  display: inline-block;
 }
 
 .container {

@@ -13,16 +13,13 @@
 
 {% block content %}
 
-  <h3>Новости</h3>
-  <br><hr><br>
-
   {% for post in posts %}
-    <article>
-      <p>{{ post.date }}</p>
-      <h3>
-        <a href="{% url 'mainApp:post_detail' post_id=post.id %}">{{ post.title }}</a>
-      </h3>
-    </article>
+    <a href="{% url 'mainApp:post_detail' post_id=post.id %}">
+      <article>
+        <p class="date">{{ post.date }}</p>
+        <h3>{{ post.title }}</h3>
+      </article>
+    </a>
   {% endfor %}
 
   <div class="center">
