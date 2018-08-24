@@ -190,19 +190,17 @@ img {
   height: 100px;
 }
 
-/* TODO --------------------->>>>>>>>>> */
+/* TODO check --------------------->>>>>>>>>> */
 .pills {
   font-family: 'Verdana';
   font-size: 15px;
-  letter-spacing: 0;
   line-height: 1.5;
-  counter-reset: li;
 }
 
 li {
   left: 1.5em;
   margin-bottom: 0.75em;
-  padding: 10px 5px;
+  padding: 8px;
   padding-left: 1em;
   position: relative;
   background: #E3DEDC;
@@ -210,19 +208,16 @@ li {
 }
 
 .pills li:before {
-  padding: 10px 0;
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -1.5em;
-  width: 1.875em;
-  text-align: center;
-  color: white;
-  font-weight: bold;
+  left: -1.0em;
+  width: 1.0em;
+  color: #d7ff45;
   background: #d7ff45;
   border-bottom-left-radius: 70em;
   border-top-left-radius: 70em;
-  counter-increment: li;
+  counter-increment: none;
   content: counter(li);
 }
 /* <<<<<<<<<<--------------------- */
