@@ -1,1 +1,1 @@
-Web site.
+Web site with Django.
